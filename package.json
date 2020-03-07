@@ -4,6 +4,7 @@
     "dev": "tsc --watch",
     "build": "tsc",
     "format": "prettier --write ./src/**",
+    "check-format": "prettier --check ./src/**",
     "lint": "eslint ./src/**"
   },
   "devDependencies": {

@@ -12,6 +12,8 @@ jobs:
       - name: Build
         run: |
           npm install
+          npm run check-format
+          npm run lint
           npm run build
           rm ./docs/js/.gitignore
           git config user.name "${GITHUB_ACTOR}"
