@@ -21,6 +21,7 @@ jobs:
       - name: Build
         run: |
           npm run build
+          npm run bundle
       - name: Push to `master` branch
         run: |
           rm ./docs/js/.gitignore
