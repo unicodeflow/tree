@@ -5,6 +5,9 @@ import { Parser, Renderer } from './core.js'
   const MAX_INDENTATION = 8
   const DEFAULT_INDENTATION = 2
   const SYNCHRONIZATION_DELAY = 800
+  const DEFAULT_INPUT_STRING = `hello
+foo
+  bar`
 
   const indentationSizeRangeInput = $(
     '#indentationSizeRangeInput'
@@ -23,6 +26,7 @@ import { Parser, Renderer } from './core.js'
     indentationSizeSpan.textContent = target.value
   })
 
+  inputStringTextArea.value = DEFAULT_INPUT_STRING
   window.setInterval(() => {
     outputStringTextArea.value = Renderer.render(
       Parser.parse(inputStringTextArea.value),
