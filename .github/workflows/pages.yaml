@@ -9,12 +9,20 @@ jobs:
     runs-on:  ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build
+      - name: Install dependencies
         run: |
           npm install
+      - name: Check format
+        run: |
           npm run check-format
+      - name: Lint
+        run: |
           npm run lint
+      - name: Build
+        run: |
           npm run build
+      - name: Push to `master` branch
+        run: |
           rm ./docs/js/.gitignore
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
