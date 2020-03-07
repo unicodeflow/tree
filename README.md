@@ -1,6 +1,6 @@
 # tree
 
-![deploy](https://github.com/unicodeflow/tree/workflows/deploy/badge.svg)
+![pages](https://github.com/unicodeflow/tree/workflows/pages/badge.svg)
 
 This is a tiny tool to mimic output of the
 [`tree`](<https://en.wikipedia.org/wiki/Tree_(command)>) command. The page is
