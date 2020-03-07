@@ -1,0 +1,22 @@
+name:
+  deploy
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  deploy:
+    runs-on:  ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: |
+          npm install
+          npm run build
+          rm ./docs/js/.gitignore
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git checkout -B master
+          git add .
+          git commit --allow-empty -m "Publish to GitHub Pages"
+          git push --force origin master
