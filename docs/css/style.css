@@ -1,4 +1,5 @@
 body {
+  color: #333;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -8,6 +9,7 @@ body {
 }
 
 header {
+  color: #ccc;
   font-size: 2em;
 }
 
@@ -15,6 +17,15 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.repo-link {
+  color: #666;
+  text-decoration: none;
+}
+
+.repo-link:hover {
+  color: #333;
 }
 
 .config {
