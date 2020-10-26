@@ -9,6 +9,25 @@ GitHub Pages feature.
 
 > https://unicodeflow.github.io/tree/
 
+## Example
+
+Input:
+
+```
+hello
+foo
+  bar
+```
+
+Output:
+
+```
+.
+├── hello
+└── foo
+    └── bar
+```
+
 ## Reference
 
 - https://en.wikipedia.org/wiki/Box-drawing_character
